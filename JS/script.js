@@ -1,17 +1,19 @@
-//var totalPrice = [];
+//---Declaration of a Global Variable totalOrderPrice and initialized to an empty array---//
+//The final total order price will be pushed to this array
+var totalOrderPrice = [];
 //------Constructor Placeorder created with it's properties----//
 function Placeorder(size, cheese, topping) {
   this.size = size;
   this.cheese = cheese;
   this.topping = topping;
-  this.price = 0
+  this.price = 0;
 }
 //--Arrays to declare the pizzaSize,pizzaCheese and pizzaTopping to be used in the prototype CostOfPizza--//
 var pizzaSize = ["Small", "Medium", "Large"];
 var pizzaCheese = ["Standard", "More Cheese", "Most Cheese"];
 var pizzaTopping = ["Bacon", "Chicken", "beef", "vegetables"];
 //-Prototype CostOfPizza created to determine the price based on the three properties i.e size,cheese,topping-//
-Placeorder.prototype.CostOfPizza = function() {
+Placeorder.prototype.costOfPizza = function() {
   if (this.size === pizzaSize[0]) {
     this.price = price + 300;
   } else if (this.size === pizzaSize[1]) {
@@ -34,7 +36,19 @@ Placeorder.prototype.CostOfPizza = function() {
     this.price += 300;
   } else if (this.topping === pizzaTopping[3]) {
     this.price += 50;
-}
+  }
   return this.price;
 }
 //----End Of the Prototype CostOfPizza---//
+
+//---Creation of prototype totalCost to be used to compute the total cost of all the orders--//
+Placeorder.prototype.totalCost = function() {
+  //created a variable shoppingCartTotal and initialized it to zero
+  var shoppingCartTotal = 0;
+  //this for loop iterates through the total orders to determine the number of orders
+  for (var order = 0; order < totalOrderPrice.length; order++) {
+    //shoppingCartTotal is now assigned a new value after the order(s) is added
+    shoppingCartTotal += totalOrderPrice[order];
+  }
+  return cartTotalPrice;
+}
