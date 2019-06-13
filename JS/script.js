@@ -7,6 +7,7 @@ function Placeorder(size, cheese, topping) {
   this.cheese = cheese;
   this.topping = topping;
   this.price = 0;
+  this.ShippingFee = 200;
 }
 //--Arrays to declare the pizzaSize,pizzaCheese and pizzaTopping to be used in the prototype CostOfPizza--//
 var pizzaSize = ["Small", "Medium", "Large"];
@@ -41,6 +42,10 @@ Placeorder.prototype.costOfPizza = function() {
 }
 //----End Of the Prototype CostOfPizza---//
 
+Placeorder.prototype.costOfDelivery = function() {
+  return this.ShippingFee;
+}
+
 //---Creation of prototype totalCost to be used to compute the total cost of all the orders--//
 Placeorder.prototype.totalCost = function() {
   //created a variable shoppingCartTotal and initialized it to zero
@@ -51,4 +56,15 @@ Placeorder.prototype.totalCost = function() {
     shoppingCartTotal += totalOrderPrice[order];
   }
   return cartTotalPrice;
+}
+//----End Of the Prototype totalCost---//
+
+//---Created and object called ShippingAddress---///
+var ShippingAddress(cityName, cityStreetName, cityAvenueName, nameOfBuilding, officeNumber) {
+  cityName:       cityName;
+  cityStreetName: cityStreetName;
+  cityAvenueName: cityAvenueName;
+  nameOfBuilding: nameOfBuilding;
+  nameOfBuilding: officeNumber;
+  deliveryAddress: (cityStreetName + " : \n" + cityAvenueName + " : \n" + nameOfBuilding + " : \n" + officeNumber);
 }
