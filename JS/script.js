@@ -1,3 +1,6 @@
+
+//-------------------------------BUSINESS LOGIC DESIGNED AND TESTED---------------------------//
+
 //---Declaration of a Global Variable totalOrderPrice and initialized to an empty array---//
 //The final total order price will be pushed to this array
 var totalOrderPrice = [];
@@ -59,12 +62,15 @@ Placeorder.prototype.totalCost = function() {
 }
 //----End Of the Prototype totalCost---//
 
-//---Created and object called ShippingAddress---///
-var ShippingAddress(cityName, cityStreetName, cityAvenueName, nameOfBuilding, officeNumber) {
-  cityName:       cityName;
-  cityStreetName: cityStreetName;
-  cityAvenueName: cityAvenueName;
-  nameOfBuilding: nameOfBuilding;
-  nameOfBuilding: officeNumber;
-  deliveryAddress: (cityStreetName + " : \n" + cityAvenueName + " : \n" + nameOfBuilding + " : \n" + officeNumber);
+//---Created and object called ShippingAddress---//
+function ShippingAddress(cityName, cityStreetName, cityAvenueName, nameOfBuilding, officeNumber) {
+  this.cityName = cityName;
+  this.CityStreetName = cityStreetName;
+  this.cityAvenueName = cityAvenueName;
+  this.nameOfBuilding = nameOfBuilding;
+  this.nameOfBuilding = officeNumber;
+  this.deliveryAddress = (cityStreetName + " : \n" + cityAvenueName + " : \n" + nameOfBuilding + " : \n" + officeNumber);
 }
+//----End Of the Constructor ShippingAddress---//
+
+//--------------------------- END OF BUSINESS LOGIC DESIGNED AND TESTED------------------------//
