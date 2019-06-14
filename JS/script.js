@@ -1,4 +1,3 @@
-
 //-------------------------------BUSINESS LOGIC DESIGNED AND TESTED---------------------------//
 
 //---Declaration of a Global Variable totalOrderPrice and initialized to an empty array---//
@@ -68,9 +67,26 @@ function ShippingAddress(cityName, cityStreetName, cityAvenueName, nameOfBuildin
   this.CityStreetName = cityStreetName;
   this.cityAvenueName = cityAvenueName;
   this.nameOfBuilding = nameOfBuilding;
-  this.nameOfBuilding = officeNumber;
-  this.deliveryAddress = (cityStreetName + " : \n" + cityAvenueName + " : \n" + nameOfBuilding + " : \n" + officeNumber);
+  this.nameOfBuilding = phoneNumber;
+  this.deliveryAddress = (cityStreetName + " : \n" + cityAvenueName + " : \n" + nameOfBuilding + " : \n");
 }
 //----End Of the Constructor ShippingAddress---//
 
 //--------------------------- END OF BUSINESS LOGIC DESIGNED AND TESTED------------------------//
+
+$(document).ready(function() {
+  $(".hide p").hide();
+  $("#design").click(function() {
+    $("#design p").toggle();
+    $("#design img").toggle();
+  });
+  $("#dev").click(function() {
+    $("#dev p").toggle();
+    $("#dev img").toggle();
+  });
+  $("#products").click(function() {
+    $("#products p").toggle();
+    $("#products img").toggle();
+  });
+
+});

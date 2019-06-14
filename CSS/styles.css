@@ -8,3 +8,14 @@ body {
 #navigation-bar {
   float: center;
 }
+
+.hide img {
+  padding: 10px
+}
+
+.caption {
+  display: table-caption;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+}
