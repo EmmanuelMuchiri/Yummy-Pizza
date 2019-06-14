@@ -62,31 +62,28 @@ Placeorder.prototype.totalCost = function() {
 //----End Of the Prototype totalCost---//
 
 //---Created and object called ShippingAddress---//
-function ShippingAddress(cityName, cityStreetName, cityAvenueName, nameOfBuilding, officeNumber) {
+function ShippingAddress(cityName, cityAvenueName, cityStreetName, nameOfBuilding, phoneNumber) {
   this.cityName = cityName;
-  this.CityStreetName = cityStreetName;
   this.cityAvenueName = cityAvenueName;
+  this.CityStreetName = cityStreetName;
   this.nameOfBuilding = nameOfBuilding;
-  this.nameOfBuilding = phoneNumber;
+  this.phoneNumber = phoneNumber;
   this.deliveryAddress = (cityStreetName + " : \n" + cityAvenueName + " : \n" + nameOfBuilding + " : \n");
 }
 //----End Of the Constructor ShippingAddress---//
 
 //--------------------------- END OF BUSINESS LOGIC DESIGNED AND TESTED------------------------//
 
-$(document).ready(function() {
-  $(".hide p").hide();
-  $("#design").click(function() {
-    $("#design p").toggle();
-    $("#design img").toggle();
-  });
-  $("#dev").click(function() {
-    $("#dev p").toggle();
-    $("#dev img").toggle();
-  });
-  $("#products").click(function() {
-    $("#products p").toggle();
-    $("#products img").toggle();
-  });
 
+$("form#address-form").submit(function(event) {
+  event.preventDefault();
+  var cityName = $("input#cityName").val();
+  var cityStreetName = $("input#cityStreetName").val();
+  var cityAvenueName = $("input#cityAvenueName").val();
+  var nameOfBuilding = $("input#nameOfBuilding").val();
+  var phoneNumber = $("input#phoneNumber").val();
+  var newAddress = new ShippingAddress(cityName, cityAvenueName, cityStreetName, nameOfBuilding, phoneNumber)
+  $("#order-content").show();
+  $("#landing-content").hide();
+  $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
 });
