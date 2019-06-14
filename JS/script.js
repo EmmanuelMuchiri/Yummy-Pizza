@@ -13,8 +13,8 @@ function Placeorder(size, cheese, topping) {
 }
 //--Arrays to declare the pizzaSize,pizzaCheese and pizzaTopping to be used in the prototype CostOfPizza--//
 var pizzaSize = ["Small", "Medium", "Large"];
-var pizzaCheese = ["Standard", "More Cheese", "Most Cheese"];
-var pizzaTopping = ["Bacon", "Chicken", "beef", "vegetables"];
+var pizzaCheese = ["Standard", "Light Cheese", "Extra Cheese"];
+var pizzaTopping = ["Bacon", "Chicken", "Beef", "Vegetables"];
 //-Prototype CostOfPizza created to determine the price based on the three properties i.e size,cheese,topping-//
 Placeorder.prototype.costOfPizza = function() {
   if (this.size === pizzaSize[0]) {

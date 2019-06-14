@@ -18,75 +18,76 @@
     <div id="navigation-bar">
       <nav class="navbar navbar-inverse">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"></a><ul class="nav navbar-nav">
+          <a class="navbar-brand" href="#"></a>
+          <ul class="nav navbar-nav">
             <li><a href="#">Home</a></li>
             <li><a href="#">Place Order</a></li>
             <li><a href="#">View Order (s)</a></li>
-            </ul>
+          </ul>
         </div>
-        </div>
-      </nav>
     </div>
-    <div class="container jumbotron">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Address Information</h2>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter City</label>
-                    <input type="text" id="cityName" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter Avenue</label>
-                    <input type="text" id="cityAvenueName" class="form-control">
-                  </div>
+    </nav>
+  </div>
+  <div class="container jumbotron">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">Address Information</h2>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="control-label">Enter City</label>
+                  <input type="text" id="cityName" class="form-control">
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter Street</label>
-                    <input type="text" id="cityStreetName" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter The Building Name</label>
-                    <input type="text" id="nameOfBuilding" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter Your Phone Number</label>
-                    <input type="number" id="phoneNumber" class="form-control">
-                  </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="control-label">Enter Avenue</label>
+                  <input type="text" id="cityAvenueName" class="form-control">
                 </div>
               </div>
             </div>
-            <div class="panel-footer">
-              <button class="btn btn-primary">Submit Address</button>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="control-label">Enter Street</label>
+                  <input type="text" id="cityStreetName" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="control-label">Enter The Building Name</label>
+                  <input type="text" id="nameOfBuilding" class="form-control">
+                </div>
+              </div>
             </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="control-label">Enter Your Phone Number</label>
+                  <input type="number" id="phoneNumber" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-primary">Submit Address</button>
           </div>
         </div>
       </div>
-      </div>
     </div>
+  </div>
+  </div>
   <div class="container jumbotron" id="order-content">
-  <h3 class="page-header">Order Options</h3>
-      <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button>
+    <div class="col-md-6">
+      <h3 class="page-header">Customize Your Pizza</h3>
+      <!-- <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button> -->
       <!-- Custom Pizza Form Start -->
       <form class="form-group" id="custom-pizza">
         <div id="form-content">
-          <h3 id="form-header">Custom Pizza Form</h3>
           <div class="row container">
             <div class="col-xs-6">
               <p>Size</p>
@@ -94,21 +95,23 @@
             <div class="col-xs-6" class="form-option">
               <select required class="form-control" id="size">
                 <option></option>
-                <option value="Small 10 in.">Small, 10"</option>
-                <option value="Medium 14 in.">Medium, 14"</option>
-                <option value="Large 18 in.">Large, 18"</option>
+                <option value="Small">Small, 10"</option>
+                <option value="Medium">Medium, 14"</option>
+                <option value="Large">Large, 18"</option>
               </select>
             </div>
           </div>
           <div class="row container">
             <div class="col-xs-6">
-              <p>Sauce</p>
+              <p>Topping</p>
             </div>
             <div class="col-xs-6" class="form-option">
               <select required class="form-control" id="sauce">
                 <option></option>
-                <option value="tomato sauce">Tomato</option>
-                <option value="alfredo sauce">Alfredo</option>
+                <option value="Bacon">Bacon</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Beef">Beef</option>
+                <option value="Vegetables">Vegetables</option>
               </select>
             </div>
           </div>
@@ -119,22 +122,21 @@
             <div class="col-xs-6" class="form-option">
               <select required class="form-control" id="cheese">
                 <option></option>
-                <option value="cheese">Cheese</option>
-                <option value="light cheese">Light Cheese</option>
-                <option value="extra cheese">Extra Cheese</option>
-                <option value="no cheese">None</option>
+                <option value="Standard">Cheese</option>
+                <option value="Light Cheese">Light Cheese</option>
+                <option value="Extra Cheese">Extra Cheese</option>
               </select>
             </div>
           </div>
-          
+
         </div>
         <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
       </form>
-      <!-- Custom Pizza Form End -->
     </div>
+    <!-- Custom Pizza Form End -->
     <!-- Cart Start -->
     <div class="col-xs-4" id="price-content">
-      <h1 class="page-header">Cart</h1>
+      <h3 class="page-header">Add To Cart</h3>
       <h2>Price: $ <span id="final-cost"></span></h2>
       <div id="order-details">
         <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
@@ -147,9 +149,10 @@
       <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
       <h3><span id="delivery-option"></span></h3>
     </div>
-    <!-- Cart End -->
   </div>
-</div>
+  <!-- Cart End -->
+  </div>
+  </div>
 </body>
 
 </html>
