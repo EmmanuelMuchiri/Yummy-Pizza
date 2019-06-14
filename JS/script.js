@@ -4,25 +4,25 @@
 //The final total order price will be pushed to this array
 var totalOrderPrice = [];
 //------Constructor Placeorder created with it's properties----//
-function Placeorder(size, cheese, topping) {
+function Placeorder(size, crust, topping) {
   this.size = size;
-  this.cheese = cheese;
+  this.crust = crust;
   this.topping = topping;
   this.price = 0;
-  this.ShippingFee = 200;
+  this.deliveryFee = 200;
 }
 //--Arrays to declare the pizzaSize,pizzaCheese and pizzaTopping to be used in the prototype CostOfPizza--//
 var pizzaSize = ["Small", "Medium", "Large"];
-var pizzaCheese = ["Standard", "Light Cheese", "Extra Cheese"];
+var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
 var pizzaTopping = ["Bacon", "Chicken", "Beef", "Vegetables"];
 //-Prototype CostOfPizza created to determine the price based on the three properties i.e size,cheese,topping-//
 Placeorder.prototype.costOfPizza = function() {
   if (this.size === pizzaSize[0]) {
-    this.price = price + 300;
+    this.price += 300;
   } else if (this.size === pizzaSize[1]) {
-    this.price = price + 400;
+    this.price += 400;
   } else if (this.size === pizzaSize[2]) {
-    this.price = price + 500;
+    this.price += 500;
   }
   if (this.cheese === pizzaCheese[0]) {
     this.price += 100;
@@ -76,14 +76,22 @@ function ShippingAddress(cityName, cityAvenueName, cityStreetName, nameOfBuildin
 
 
 $("form#address-form").submit(function(event) {
-  event.preventDefault();
-  var cityName = $("input#cityName").val();
-  var cityStreetName = $("input#cityStreetName").val();
-  var cityAvenueName = $("input#cityAvenueName").val();
-  var nameOfBuilding = $("input#nameOfBuilding").val();
-  var phoneNumber = $("input#phoneNumber").val();
-  var newAddress = new ShippingAddress(cityName, cityAvenueName, cityStreetName, nameOfBuilding, phoneNumber)
-  $("#order-content").show();
-  $("#landing-content").hide();
-  $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
+    event.preventDefault();
+      var userCityName = $("input#cityName").val();
+      var userCityAvenueName = $("input#cityAvenueName").val();
+      var userCityStreetName = $("input#cityStreetName").val();
+      var userNameOfBuilding = $("input#nameOfBuilding").val();
+      var userPhoneNumber = $("input#phoneNumber").val();
+      var userNewAddress = new ShippingAddress(cityName, cityAvenueName, cityStreetName, nameOfBuilding, phoneNumber)
+      $("p#show-contact").append("<li><span class='cityName'>" + ShippingAddress.cityName + "</span></li>");
+      $("input#cityName").val("");
+      // $("input#cityAvenueName").val("");
+      // $("input#cityStreetName").val("");
+      // $("input#nameOfBuilding").val("");
+      // $("input#phoneNumber").val("");
+    });
+    $(".display-contact").last().click(function() {
+      $("#show-contact").show();
+      $("#show-contact h2").text(newContact.cityName);
+    });
 });
