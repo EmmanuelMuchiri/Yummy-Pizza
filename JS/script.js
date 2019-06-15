@@ -79,25 +79,16 @@ $(document).ready(function() {
     var customSize = $("select#size").val();
     var customcrust = $("select#crust").val();
     var customtopping = $("select#topping").val();
-    var pizzaDetails = (customSize + " " + customcrust + " " + customtopping);
     var newPizzaOrder = new Placeorder(customSize, customcrust, customtopping);
     newPizzaOrder.costOfPizza();
     totalOrderPrice.push(newPizzaOrder.price);
-    // $("#pizza-details-dropdown").show();
-    // $("#final-cost").text(newPizzaOrder.totalCost());
-    // $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
-    // $("#size, #crust, #topping").val("");
     $("#pizza-size").show();
     $("#pizza-crust").show();
     $("#pizza-topping").show();
-    $("#pizza-size").append(customSize);
-    $("#pizza-crust").append(customcrust);
-    $("#pizza-topping").append(customtopping);
-    $("#final-cost").text(newPizzaOrder.totalCost());
-    // $("#size, #crust, #topping").val("");
-  });
-  $("#pizza-details-dropdown").click(function() {
-    $("#pizza-details").toggle();
+    $("#pizza-size").append("\t" + customSize);
+    $("#pizza-crust").append("\t" + customcrust);
+    $("#pizza-topping").append("\t" + customtopping);
+    $("#final-cost").text("\t" + newPizzaOrder.totalCost());
   });
   $("#checkout-btn").click(function() {
     location.reload();

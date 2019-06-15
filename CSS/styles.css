@@ -78,3 +78,6 @@ body {
 {
   background-color: black;
 }
+#final-cost{
+  text-decoration:underline;
+}
