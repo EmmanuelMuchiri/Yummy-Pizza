@@ -9,7 +9,7 @@ function Placeorder(size, crust, topping) {
   this.crust = crust;
   this.topping = topping;
   this.price = 0;
-  this.deliveryFee = 200;
+  // this.deliveryFee = 200;
 }
 //--Arrays to declare the pizzaSize,pizzaCrust and pizzaTopping to be used in the prototype CostOfPizza--//
 var pizzaSize = ["Small", "Medium", "Large"];
@@ -24,7 +24,7 @@ Placeorder.prototype.costOfPizza = function() {
   } else if (this.size === pizzaSize[2]) {
     this.price += 500;
   }
-  if (this.cheese === pizzaCrust[0]) {
+  if (this.crust === pizzaCrust[0]) {
     this.price += 100;
   } else if (this.cheese === pizzaCrust[1]) {
     this.price += 200;
@@ -77,35 +77,21 @@ $(document).ready(function() {
   $("form#customized-pizza").submit(function(event) {
     event.preventDefault();
     var customSize = $("select#size").val();
-    var customCrust = $("select#cheese").val();
-    var customTopping = $("select#topping").val();
-    // var pizzaDetails = (customSize + " - " + customCrust + ", " + customTopping);
-    var newPizzaOrder = new Placeorder(customSize, customCrust, customTopping);
+    var customcrust = $("select#crust").val();
+    var customtopping = $("select#topping").val();
+    var pizzaDetails = (customSize + " " + customcrust + " " + customtopping);
+    var newPizzaOrder = new Placeorder(customSize, customcrust, customtopping);
     newPizzaOrder.costOfPizza();
     totalOrderPrice.push(newPizzaOrder.price);
-    $("#customized-pizza").show();
+    $("#pizza-details-dropdown").show();
     $("#final-cost").text(newPizzaOrder.totalCost());
-    // $("#inputtedsize").append("<ol><li>" + newPizzaOrder.customSize "</li></ol>").val("");
-    // // $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
-    // // $("#size, #topping, #cheese).val("");
-    // $("#checkout-btn").click(function() {
-    //   location.reload();
-    $("#inputtedsize").append(newPizzaOrder.customSize);
-    $("select#size").val("");
-    // $("input#new-last-name").val("");
+    $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
+    $("#size, #size, #topping").val("");
   });
-
-});
-$(document).ready(function() {
-  $(".para").hover(function() {
-    $(".para p").show().css({
-      "position": "absolute",
-      "color": "white",
-      "top": "47.5%",
-      "left": "22%"
-    });
+  $("#pizza-details-dropdown").click(function() {
+    $("#pizza-details").toggle();
   });
-  $(".para").mouseleave(function() {
-    $(".para p").hide();
+  $("#checkout-btn").click(function() {
+    location.reload();
   });
 });

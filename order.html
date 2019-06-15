@@ -8,7 +8,7 @@
   <link href="FONT-AWESOME/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="JS/scripts.js"></script>
+  <script src="JS/script.js"></script>
   <link rel="shortcut icon" href="IMAGES/logo.png">
   <title>Yummy Pizza</title>
 </head>
@@ -27,8 +27,7 @@
       </nav>
     </div>
   </div>
-
-  <div class="container jumbotron" id="order-content">
+  <div class="container jumbotron"id="order-content">
     <div class="col-md-6">
       <h3 class="page-header">Customize Your Pizza</h3>
       <!-- <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button> -->
@@ -77,23 +76,20 @@
           </div>
 
         </div>
-        <button type="submit" class="btn btn-danger" id="submit-customized-pizza">Place Order</button>
+        <button type="submit" class="btn btn-danger">Place Order</button>
       </form>
     </div>
     <!-- Custom Pizza Form End -->
     <!-- Cart Start -->
     <div class="col-xs-4" id="price-content">
-      <h3 class="page-header">Cart Totals :</h3>
-      <div id="customized-pizza">
-        <p id="">Size :</p>
-        <ul id="inputtedsize"></ul>
-        <p id="topping-drop-down">Topping :</p>
-        <ul id="topping"></ul>
-        <p id="cheese-drop-down">Cheese :</p>
-        <ul id="cheese"></ul>
+      <h1 class="page-header">Cart</h1>
+      <h2>Price in Kshs : <span id="final-cost"></span></h2>
+      <div id="order-details">
+        <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
+        <ul id="pizza-details"></ul>
       </div>
-      <p>Total Price in Kshs : <span id="final-cost"></span></p>
       <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
+      <h3><span id="delivery-option"></span></h3>
     </div>
     <!-- <div class="container jumbotron">
       <div class="row">
