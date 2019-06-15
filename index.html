@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <link href="CSS/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="CSS/bootstrap-social.css" rel="stylesheet" type="text/css">
-  <link href="FONT-AWESOME/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="CSS/styles.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="JS/scripts.js"></script>
-  <link rel="shortcut icon" href="IMAGES/logo.png">
+  <link rel="shortcut icon" href="images/logo.png">
   <title>Yummy Pizza</title>
 </head>
 
@@ -20,147 +20,115 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#"></a>
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Place Order</a></li>
-            <li><a href="#">View Order (s)</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="order.html">Place Order</a></li>
           </ul>
         </div>
+      </nav>
     </div>
-    </nav>
   </div>
-  <div class="container jumbotron">
-    <div class="row">
-      <div class="col-md-6">
-        <form id="address-form" method="get">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Address Information</h2>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter City</label>
-                    <input type="text" id="cityName" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter Avenue</label>
-                    <input type="text" id="cityAvenueName" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter Street</label>
-                    <input type="text" id="cityStreetName" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter The Building Name</label>
-                    <input type="text" id="nameOfBuilding" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label">Enter Your Phone Number</label>
-                    <input type="number" id="phoneNumber" class="form-control">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel-footer">
-              <button class="btn btn-primary" type="submit">Submit Address</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-md-6 panel panel-default display-contact">
-        <div id="show-contact">
-             <h2></h2>
-             <p>City Name: <span class="cityNamename"></span></p>
-             <p>City Avenue Name: <span class="cityAvenueName"></span></p>
-             <p>City Street Name: <span class="cityStreetName"></span></p>
-             <p>Name Of Building: <span class="nameOfBuilding"></span></p>
-             <p>PhoneNumber: <span class="phoneNumber"></span></p>
-           </div>
+  <div class="container jumbotron homepage ">
+    <h1 class="text-xl-center">WELCOME <br><br>TO YUMMY PIZZA</h1>
+    <p class="text-xl-center">Bon Apetit</p>
+  </div>
+  <div class="text-center">
+    <h1 class="text-xl-center">ABOUT US</h1>
+    <p>When you work with us,you are part of a team of commited collaborators.All aspects of our software Development
+      process are integrated,interactive and agile.</p>
+    <p>Our approach unifies design,development and product management to create exceptional products.</p>
+    <p>We start each project by understanding your business goals,the user needs and product requirements.</p>
+    <p>Then we help translate them into effective and elegant solutions</p>
+  </div>
+  <div class="container jumbotron portfolio para">
+    <h1>TYPE OF PIZZAS</h1>
+<div class="row">
+  <div class="col-md-3 ">
+    <img src="images/portfolio/work1.jpg" id="imageOne">
+    <div id="textOne"><p>BBQ CHICKEN</p></div>
+    <div class=hoverclass>
+    <div class=texthover>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-3">
+    <img src="images/portfolio/work2.jpg" id="imageTwo">
+    <div id="textTwo"><p>CHICKEN PERIPERI</p></div>
+    <div class=hoverclass>
+    <div class=texthover>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-3">
+    <img src="images/portfolio/work3.jpg" id="imageThree">
+    <div id="textThree"><p>HAWAIAN</p></div>
+    <div class=hoverclass>
+    <div class=texthover>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-3">
+    <img src="images/portfolio/work4.jpg" id="imageFour">
+    <div id="textFour"><p>SOMETHING MEATY</p></div>
+    <div class=hoverclass>
+    <div class=texthover>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/portfolio/work5.jpg" id="image">
+    <div id="textThree"><p>CHICKEN AND MUSHROOM</p></div>
+    <div class=hoverclass>
+      <div class=texthover>
       </div>
     </div>
   </div>
-  </div>
-  <div class="container jumbotron" id="order-content">
-    <div class="col-md-6">
-      <h3 class="page-header">Customize Your Pizza</h3>
-      <!-- <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button> -->
-      <!-- Custom Pizza Form Start -->
-      <form class="form-group" id="customized-pizza">
-        <div id="form-content">
-          <div class="row container">
-            <div class="col-xs-6">
-              <p>Size</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="size">
-                <option></option>
-                <option value="Small">Small, 10"</option>
-                <option value="Medium">Medium, 14"</option>
-                <option value="Large">Large, 18"</option>
-              </select>
-            </div>
-          </div>
-          <div class="row container">
-            <div class="col-xs-6">
-              <p>Topping</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="topping">
-                <option></option>
-                <option value="Bacon">Bacon</option>
-                <option value="Chicken">Chicken</option>
-                <option value="Beef">Beef</option>
-                <option value="Vegetables">Vegetables</option>
-              </select>
-            </div>
-          </div>
-          <div class="row container">
-            <div class="col-xs-6">
-              <p>Cheese</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="cheese">
-                <option></option>
-                <option value="Standard">Cheese</option>
-                <option value="Light Cheese">Light Cheese</option>
-                <option value="Extra Cheese">Extra Cheese</option>
-              </select>
-            </div>
-          </div>
-
-        </div>
-        <button type="submit" class="btn btn-danger" id="submit-customized-pizza">Place Order</button>
-      </form>
-    </div>
-    <!-- Custom Pizza Form End -->
-    <!-- Cart Start -->
-    <div class="col-xs-4" id="price-content">
-      <h3 class="page-header">Cart Totals :</h3>
-      <div id="customized-pizza">
-        <p id="size">Size :</p>
-        <ul id=""></ul>
-        <p id="topping">Topping :</p>
-        <ul id=""></ul>
-        <p id="cheese">Cheese :</p>
-        <ul id=""></ul>
+  <div class="col-md-3">
+    <img src="images/portfolio/work6.jpg" id="image">
+    <div id="textThree"><p>CHICKEN TIKKA</p></div>
+    <div class=hoverclass>
+      <div class=texthover>
       </div>
-      <p>Total Price in Kshs :</p>
-      <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
     </div>
   </div>
+  <div class="col-md-3">
+    <img src="images/portfolio/work7.jpeg" id="image">
+    <div id="textThree"><p>VEGETABLE TIKKA</p></div>
+    <div class=hoverclass>
+      <div class=texthover>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <img src="images/portfolio/work8.jpg" id="image">
+    <div id="textThree"><p>CHICKEN & BEEF PEPERONNI</p></div>
+    <div class=hoverclass>
+      <div class=texthover>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
+
+<footer>
+  <div class="container text-center jumbotron">
+    <p>
+      <img src="images/social_icons/behance.png" alt="behance icon">
+      <img src="images/social_icons/dribble.png" alt="dribble icon">
+      <img src="images/social_icons/facebook.png" alt="facebook icon">
+      <img src="images/social_icons/flickr.png" alt="flickr icon">
+      <img src="images/social_icons/g_plus.png" alt="g_plus icon">
+      <img src="images/social_icons/pinterest.png" alt="pinterest icon">
+      <img src="images/social_icons/skype.png" alt="skype icon">
+      <img src="images/social_icons/stumble_upon.png" alt="stumble_upon icon">
+      <img src="images/social_icons/twitter.png" alt="twitter icon">
+      <img src="images/social_icons/you_tube.png" alt="youtube icon">
+    </p>
+    <p>yummy Pizza</p>
+  </div>
+  </div>
+</footer>
 
 </html>

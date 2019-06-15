@@ -8,6 +8,27 @@ body {
 #navigation-bar {
   float: center;
 }
+.homepage {
+  text-align: center;
+  color: white;
+  background-image: url("../images/homepage.jpg");
+  background-size: 100%;
+  position: relative;
+  text-transform: capitalize;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.portfolio {
+  text-align: center;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.portfolio img {
+  padding: 10px;
+  width: 100%;
+}
+
 
 .hide img {
   padding: 10px
@@ -17,5 +38,18 @@ body {
   display: table-caption;
   text-align: center;
   font-size: 20px;
-  font-family: sans-serif;
+  text-transform: capitalize;
+  font-family: 'Shadows Into Light', cursive;
+}
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background: #999;
+}
+.para p{
+  font-family: 'Pacifico', cursive;
+  text-transform: capitalize;
 }
