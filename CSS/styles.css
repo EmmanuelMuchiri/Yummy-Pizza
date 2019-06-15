@@ -9,12 +9,12 @@ body {
 
 #navigation-bar {
   float: center;
+}
 
+.yummynav {
+  border: 2px solid red;
 }
-.yummynav
-{
-    border: 2px solid red;
-}
+
 .homepage {
   text-align: center;
   color: white;
@@ -33,7 +33,7 @@ body {
   border: 2px solid red;
 }
 
- h1 {
+h1 {
   font-family: 'Caveat', cursive;
   border-bottom: 2px solid red;
 }
@@ -62,25 +62,30 @@ body {
   height: 30px;
   width: 100%;
   background: #999;
+}
 
+.yummyfooter {
+  border: 2px solid red;
 }
-.yummyfooter{
-    border: 2px solid red;
-}
+
 .para p {
   font-family: 'Pacifico', cursive;
   text-transform: capitalize;
 }
-.about-us{
+
+.about-us {
   border: 2px solid red;
 }
-.jumbotron
-{
+
+.jumbotron {
   background-color: black;
 }
-#final-cost{
-  text-decoration:underline;
+
+#final-cost {
+  text-decoration: underline;
 }
-#address-form{
+
+#address-form {
   display: none;
+  color: black
 }

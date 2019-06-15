@@ -95,3 +95,11 @@ $(document).ready(function() {
     location.reload();
   });
 });
+$(document).ready(function() {
+  $("#delivery-btn").click(function() {
+    $("#address-form").fadeIn();
+  });
+  $("#address-btn").click(function() {
+    $("#address-form").slideUp();
+  });
+});
