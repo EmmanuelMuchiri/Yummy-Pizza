@@ -2,11 +2,17 @@
 
 body {
   margin: 0;
-  background-image: url("../IMAGES/background_image.gif");
+  /* background-image: url("../IMAGES/background_image.gif"); */
+  border: 2px solid red;
 }
 
 #navigation-bar {
   float: center;
+
+}
+.yummynav
+{
+    border: 2px solid red;
 }
 .homepage {
   text-align: center;
@@ -16,19 +22,25 @@ body {
   position: relative;
   text-transform: capitalize;
   font-family: 'Shadows Into Light', cursive;
+  border: 2px solid red;
 }
 
 .portfolio {
   text-align: center;
   padding-left: 7px;
   padding-right: 7px;
+  border: 2px solid red;
+}
+
+ h1 {
+  font-family: 'Caveat', cursive;
+  border-bottom: 2px solid red;
 }
 
 .portfolio img {
   padding: 10px;
   width: 100%;
 }
-
 
 .hide img {
   padding: 10px
@@ -41,6 +53,7 @@ body {
   text-transform: capitalize;
   font-family: 'Shadows Into Light', cursive;
 }
+
 #footer {
   position: fixed;
   left: 0px;
@@ -48,8 +61,15 @@ body {
   height: 30px;
   width: 100%;
   background: #999;
+
 }
-.para p{
+.yummyfooter{
+    border: 2px solid red;
+}
+.para p {
   font-family: 'Pacifico', cursive;
   text-transform: capitalize;
+}
+.about-us{
+  border: 2px solid red;
 }
