@@ -4,6 +4,7 @@ body {
   margin: 0;
   /* background-image: url("../IMAGES/background_image.gif"); */
   border: 2px solid red;
+  color: white;
 }
 
 #navigation-bar {
@@ -72,4 +73,8 @@ body {
 }
 .about-us{
   border: 2px solid red;
+}
+.jumbotron
+{
+  background-color: black;
 }
