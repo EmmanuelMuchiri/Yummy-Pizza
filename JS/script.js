@@ -83,10 +83,18 @@ $(document).ready(function() {
     var newPizzaOrder = new Placeorder(customSize, customcrust, customtopping);
     newPizzaOrder.costOfPizza();
     totalOrderPrice.push(newPizzaOrder.price);
-    $("#pizza-details-dropdown").show();
+    // $("#pizza-details-dropdown").show();
+    // $("#final-cost").text(newPizzaOrder.totalCost());
+    // $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
+    // $("#size, #crust, #topping").val("");
+    $("#pizza-size").show();
+    $("#pizza-crust").show();
+    $("#pizza-topping").show();
+    $("#pizza-size").append(customSize);
+    $("#pizza-crust").append(customcrust);
+    $("#pizza-topping").append(customtopping);
     $("#final-cost").text(newPizzaOrder.totalCost());
-    $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
-    $("#size, #crust, #topping").val("");
+    // $("#size, #crust, #topping").val("");
   });
   $("#pizza-details-dropdown").click(function() {
     $("#pizza-details").toggle();
