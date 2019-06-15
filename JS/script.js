@@ -86,7 +86,7 @@ $(document).ready(function() {
     $("#pizza-details-dropdown").show();
     $("#final-cost").text(newPizzaOrder.totalCost());
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
-    $("#size, #size, #topping").val("");
+    $("#size, #crust, #topping").val("");
   });
   $("#pizza-details-dropdown").click(function() {
     $("#pizza-details").toggle();
