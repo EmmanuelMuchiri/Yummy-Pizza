@@ -73,6 +73,7 @@ function ShippingAddress(cityName, cityAvenueName, cityStreetName, nameOfBuildin
 //----End Of the Constructor ShippingAddress---//
 
 //--------------------------- END OF BUSINESS LOGIC DESIGNED AND TESTED------------------------//
+//-------------------------------------USER INTERFACE LOGIC------------------------------------//
 $(document).ready(function() {
   $("form#customized-pizza").submit(function(event) {
     event.preventDefault();
@@ -85,10 +86,10 @@ $(document).ready(function() {
     $("#pizza-size").show();
     $("#pizza-crust").show();
     $("#pizza-topping").show();
-    $("#pizza-size").append("\t" + customSize);
-    $("#pizza-crust").append("\t" + customcrust);
-    $("#pizza-topping").append("\t" + customtopping);
-    $("#final-cost").text("\t" + newPizzaOrder.totalCost());
+    $("#pizza-size").append("\t" + "\t" + customSize);
+    $("#pizza-crust").append("\t" + "\t" + customcrust);
+    $("#pizza-topping").append("\t" + "\t" + customtopping);
+    $("#final-cost").text("\t" + "\t" + newPizzaOrder.totalCost());
   });
   $("#checkout-btn").click(function() {
     location.reload();
