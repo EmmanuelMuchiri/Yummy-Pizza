@@ -101,5 +101,6 @@ $(document).ready(function() {
   });
   $("#address-btn").click(function() {
     $("#address-form").slideUp();
+    $("#alert-success").fadeIn();
   });
 });

@@ -93,3 +93,6 @@ h1 {
   display: none;
   color: black
 }
+#alert-success{
+  display: none;
+}
