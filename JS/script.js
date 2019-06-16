@@ -79,7 +79,7 @@ $(document).ready(function() {
     event.preventDefault();
     var customSize = $("select#size").val();
     var customcrust = $("select#crust").val();
-    var customtopping = $("select#topping").val();
+    var customtopping = $("input#topping").val();
     var newPizzaOrder = new Placeorder(customSize, customcrust, customtopping);
     newPizzaOrder.costOfPizza();
     totalOrderPrice.push(newPizzaOrder.price);
