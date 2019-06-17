@@ -31,7 +31,7 @@ This is a website that you can customize your own pizza then place and order and
 
 -   Connect to the internet
 -   Download a web browser of your preference
--   click here to open the link : <https://emmanuelmuchiri.github.io/Delani-Studio/>
+-   click here to open the link : <https://emmanuelmuchiri.github.io/Yummy-Pizza/>
     ## Known Bugs
     {In case you experience bugs kindly refresh your web page or restart your web browser }
     ## Technologies Used
